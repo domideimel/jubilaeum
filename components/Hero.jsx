@@ -1,17 +1,17 @@
-import Image from 'next/image'
-import { Container } from 'reactstrap'
+import { Container } from 'reactstrap';
 
 const Hero = () => {
   return (<section className={'section-lg'}>
     <Container className={'d-flex align-items-center justify-content-center mb-4'}>
-      <Image
+      <img
         width={874}
-        height={620} src="/img/hero.jpg"
+        height={620}
+        src="/img/hero.jpg"
         alt="50 Jahre Negertalmusikanten"
         loading="lazy"
         className={'img-fluid'} />
     </Container>
-  </section>)
-}
+  </section>);
+};
 
-export default Hero
+export default Hero;

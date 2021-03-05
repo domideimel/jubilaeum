@@ -1,17 +1,25 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { useState } from 'react'
-import { Col, Collapse, Container, Nav, Navbar, NavbarBrand, NavItem, NavLink, Row } from 'reactstrap'
+import Link from 'next/link';
+import { useState } from 'react';
+import {
+  Col,
+  Collapse,
+  Container,
+  Nav,
+  Navbar,
+  NavItem,
+  NavLink,
+  Row
+} from 'reactstrap';
 
 const Navigation = () => {
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const setOpen = () => {
-    if (window.innerWidth >= 768) return
+    if (window.innerWidth >= 768) return;
 
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
   return (<>
     <Navbar
       className="navbar-horizontal navbar-light sticky-top bg-white shadow"
@@ -19,7 +27,7 @@ const Navigation = () => {
     >
       <Container>
         <Link href="#top">
-          <Image width={193} height={50} src="/img/logo.png" alt="50 Jahre Negertalmusikanten" />
+          <img width={193} height={50} src="/img/logo.png" alt="50 Jahre Negertalmusikanten" />
         </Link>
         <button
           aria-controls="navbar-primary"
@@ -38,7 +46,7 @@ const Navigation = () => {
           <div className="navbar-collapse-header">
             <Row>
               <Col className="collapse-brand" xs="6">
-                <Image width={193} height={50} src="/img/logo.png" alt="50 Jahre Negertalmusikanten" />
+                <img width={193} height={50} src="/img/logo.png" alt="50 Jahre Negertalmusikanten" />
               </Col>
               <Col className="collapse-close" xs="6">
                 <button
@@ -99,7 +107,7 @@ const Navigation = () => {
         </Collapse>
       </Container>
     </Navbar>
-  </>)
-}
+  </>);
+};
 
-export default Navigation
+export default Navigation;
