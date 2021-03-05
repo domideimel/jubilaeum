@@ -1,4 +1,10 @@
-import { Col, Container, Nav, NavItem, Row } from 'reactstrap'
+import {
+  Col,
+  Container,
+  Nav,
+  NavItem,
+  Row
+} from 'reactstrap';
 
 const Footer = () => {
   return (<footer className='footer'>
@@ -30,7 +36,7 @@ const Footer = () => {
         </Col>
       </Row>
     </Container>
-  </footer>)
-}
+  </footer>);
+};
 
-export default Footer
+export default Footer;

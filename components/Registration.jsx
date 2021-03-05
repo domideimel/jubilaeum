@@ -1,21 +1,33 @@
-import { useRef, useState } from 'react'
-import { Alert, Button, Col, Container, Form, FormGroup, Input, Row } from 'reactstrap'
+import {
+  useRef,
+  useState
+} from 'react';
+import {
+  Alert,
+  Button,
+  Col,
+  Container,
+  Form,
+  FormGroup,
+  Input,
+  Row
+} from 'reactstrap';
 
 const Registration = () => {
-  const [name, setName] = useState('')
-  const [nachname, setNachname] = useState('')
-  const [strasse, setStrasse] = useState('')
-  const [ort, setOrt] = useState('')
-  const [email, setEmail] = useState('')
-  const [handy, setHandy] = useState('')
-  const [konzert, setKonzert] = useState('')
-  const [festveranstaltung, setFestveranstaltung] = useState('')
-  const [fruehschoppenkonzert, setFruehschoppenkonzert] = useState('')
-  const [text, setText] = useState('')
-  const [error, setError] = useState(null)
-  const [success, setSuccess] = useState(false)
+  const [name, setName] = useState('');
+  const [nachname, setNachname] = useState('');
+  const [strasse, setStrasse] = useState('');
+  const [ort, setOrt] = useState('');
+  const [email, setEmail] = useState('');
+  const [handy, setHandy] = useState('');
+  const [konzert, setKonzert] = useState('');
+  const [festveranstaltung, setFestveranstaltung] = useState('');
+  const [fruehschoppenkonzert, setFruehschoppenkonzert] = useState('');
+  const [text, setText] = useState('');
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
 
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
 
   const formData = {
     name,
@@ -28,22 +40,22 @@ const Registration = () => {
     festveranstaltung,
     fruehschoppenkonzert,
     text
-  }
+  };
 
   const encode = (data) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-  }
+      .join('&');
+  };
 
   const checkIfFormIsNotEmpty = () => {
-    return name !== '' && nachname !== '' && strasse !== '' && ort !== '' && email !== '' && konzert !== '' && festveranstaltung !== ''
-  }
+    return name !== '' && nachname !== '' && strasse !== '' && ort !== '' && email !== '' && konzert !== '' && festveranstaltung !== '';
+  };
 
   const onSubmit = e => {
-    e.preventDefault()
-    const { current } = sectionRef
-    setError(null)
+    e.preventDefault();
+    const { current } = sectionRef;
+    setError(null);
     if (checkIfFormIsNotEmpty()) {
       fetch('/', {
         method: 'POST',
@@ -51,31 +63,31 @@ const Registration = () => {
         body: encode({ 'form-name': 'contact', ...formData })
       })
         .then(() => {
-          setName('')
-          setNachname('')
-          setStrasse('')
-          setOrt('')
-          setEmail('')
-          setKonzert(null)
-          setFestveranstaltung(null)
-          setFruehschoppenkonzert(null)
-          setText('')
-          setHandy('')
-          setSuccess(true)
+          setName('');
+          setNachname('');
+          setStrasse('');
+          setOrt('');
+          setEmail('');
+          setKonzert(null);
+          setFestveranstaltung(null);
+          setFruehschoppenkonzert(null);
+          setText('');
+          setHandy('');
+          setSuccess(true);
         })
-        .catch(error => setError('Fehler beim versenden'))
+        .catch(error => setError('Fehler beim versenden'));
       current.scrollIntoView({
         block: 'start',
         behavior: 'smooth'
-      })
+      });
     } else {
-      setError('Bitte füll die mit Stern markierten Felder aus!')
+      setError('Bitte füll die mit Stern markierten Felder aus!');
       current.scrollIntoView({
         block: 'start',
         behavior: 'smooth'
-      })
+      });
     }
-  }
+  };
 
   return (<section id={'anmeldung'} className={'section-lg'} ref={sectionRef} style={{ background: '#f5f7f9' }}>
     <Container>
@@ -320,7 +332,7 @@ const Registration = () => {
         </Col>
       </Row>
     </Container>
-  </section>)
-}
+  </section>);
+};
 
-export default Registration
+export default Registration;

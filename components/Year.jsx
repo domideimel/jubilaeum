@@ -1,8 +1,12 @@
-import { Col, Container, Row, Table } from "reactstrap";
+import {
+  Col,
+  Container,
+  Row,
+  Table
+} from 'reactstrap';
 
 const Year = () => {
-  return (
-    <section id={"festjahr"} className={"section-lg bg-danger text-white"}>
+  return (<section id={'festjahr'} className={'section-lg bg-danger text-white'}>
       <Container>
         <Row>
           <Col>
@@ -49,13 +53,13 @@ const Year = () => {
             </p>
           </Col>
         </Row>
-        <Row className={"mt-md-4"}>
+        <Row className={'mt-md-4'}>
           <Col>
             <h1 className="display-3 text-white">
               Willkommen zum 50-jährigen Jubiläum an folgenden Terminen:
             </h1>
-            <Table className={"text-white mt-4 table-responsive"}>
-              <tbody className={"w-100"}>
+            <Table className={'text-white mt-4 table-responsive'}>
+              <tbody className={'w-100'}>
               <tr>
                 <td>30.04.2021 *</td>
                 <td>Maibaum aufstellen</td>
@@ -96,8 +100,7 @@ const Year = () => {
           </Col>
         </Row>
       </Container>
-    </section>
-  );
-}
+    </section>);
+};
 
 export default Year;

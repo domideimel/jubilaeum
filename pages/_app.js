@@ -1,10 +1,13 @@
-import Head from 'next/head'
+import 'argon-design-system-react/src/assets/scss/argon-design-system-react.scss';
+import Head from 'next/head';
 
-import '../styles/fonts.scss'
-import '../styles/global.scss'
-import 'argon-design-system-react/src/assets/scss/argon-design-system-react.scss'
+import '../styles/fonts.scss';
+import '../styles/global.scss';
 
-const App = ({ Component, pageProps }) => {
+const App = ({
+  Component,
+  pageProps
+}) => {
   return (<>
     <Head>
       <meta name="description" content="50 Jähriges Jubiläum der Negertalmusikanten" />
@@ -59,7 +62,7 @@ const App = ({ Component, pageProps }) => {
       />
     </Head>
     <Component {...pageProps} />
-  </>)
-}
+  </>);
+};
 
-export default App
+export default App;
