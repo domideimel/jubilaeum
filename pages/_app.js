@@ -2,7 +2,6 @@ import 'argon-design-system-react/src/assets/scss/argon-design-system-react.scss
 import Head from 'next/head';
 
 import '../styles/fonts.scss';
-import '../styles/global.scss';
 
 const App = ({
   Component,
@@ -10,7 +9,7 @@ const App = ({
 }) => {
   return (<>
     <Head>
-      <meta name="description" content="50 Jähriges Jubiläum der Negertalmusikanten" />
+      <meta name="description" content="Negertalmusikanten Siedlinghausen" />
       <title>50 Jahre Negertalmusikanten</title>
       <link
         rel="preload"
