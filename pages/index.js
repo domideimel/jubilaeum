@@ -1,7 +1,6 @@
-const Home = () => {
+const Home = (props) => {
   return (<>
-   <div>Hallo Welt</div>
+    <div>Hallo Welt</div>
   </>);
 };
-
 export default Home;

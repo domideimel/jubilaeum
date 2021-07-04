@@ -4,7 +4,7 @@ const handler = async (req, res) => {
   const { name } = req.query;
   const { mediaItem } = await fetchAPI(`
     query MediaItemByName($id: ID!, $idType: MediaItemIdType!) {
-      mediaItem(idType: $idType, id: $id) {
+      mediaItem(id: $id, idType: $idType) {
         sourceUrl
         srcSet
         altText

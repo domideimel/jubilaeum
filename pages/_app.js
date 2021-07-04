@@ -1,5 +1,8 @@
 import 'argon-design-system-react/src/assets/scss/argon-design-system-react.scss';
 import Head from 'next/head';
+import Header from '../components/Header';
+
+import { AppWrapper } from '../context';
 
 import '../styles/fonts.scss';
 
@@ -7,10 +10,9 @@ const App = ({
   Component,
   pageProps
 }) => {
-  return (<>
+  return (<AppWrapper>
     <Head>
       <meta name="description" content="Negertalmusikanten Siedlinghausen" />
-      <title>50 Jahre Negertalmusikanten</title>
       <link
         rel="preload"
         href="/fonts/open-sans-v18-latin-300.woff2"
@@ -60,8 +62,9 @@ const App = ({
         crossOrigin=""
       />
     </Head>
+    <Header />
     <Component {...pageProps} />
-  </>);
+  </AppWrapper>);
 };
 
 export default App;
