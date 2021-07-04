@@ -61,23 +61,13 @@ const Year = () => {
             <Table className={'text-white mt-4 table-responsive'}>
               <tbody className={'w-100'}>
               <tr>
-                <td>30.04.2021 *</td>
-                <td>Maibaum aufstellen</td>
-                <td>@ Eschenplatz Siedlinghausen</td>
-              </tr>
-              <tr>
-                <td>19.09.2021 *</td>
-                <td>Jubiläumskonzert</td>
-                <td>@ Schützenhalle Siedlinghausen</td>
-              </tr>
-              <tr>
-                <td>30.10.2021 *</td>
-                <td>Festveranstaltung</td>
-                <td>@ Schützenhalle Siedlinghausen</td>
-              </tr>
-              <tr>
                 <td>31.10.2021 *</td>
                 <td>Frühschoppenkonzert</td>
+                <td>@ Schützenhalle Siedlinghausen</td>
+              </tr>
+              <tr>
+                <td>11.12.2021 *</td>
+                <td>Jubiläumskonzert</td>
                 <td>@ Schützenhalle Siedlinghausen</td>
               </tr>
               </tbody>

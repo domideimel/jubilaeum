@@ -21,7 +21,6 @@ const Registration = () => {
   const [email, setEmail] = useState('');
   const [handy, setHandy] = useState('');
   const [konzert, setKonzert] = useState('');
-  const [festveranstaltung, setFestveranstaltung] = useState('');
   const [fruehschoppenkonzert, setFruehschoppenkonzert] = useState('');
   const [text, setText] = useState('');
   const [error, setError] = useState(null);
@@ -37,7 +36,6 @@ const Registration = () => {
     email,
     handy,
     konzert,
-    festveranstaltung,
     fruehschoppenkonzert,
     text
   };
@@ -49,7 +47,7 @@ const Registration = () => {
   };
 
   const checkIfFormIsNotEmpty = () => {
-    return name !== '' && nachname !== '' && strasse !== '' && ort !== '' && email !== '' && konzert !== '' && festveranstaltung !== '';
+    return name !== '' && nachname !== '' && strasse !== '' && ort !== '' && email !== '' && konzert !== '';
   };
 
   const onSubmit = e => {
@@ -69,7 +67,6 @@ const Registration = () => {
           setOrt('');
           setEmail('');
           setKonzert(null);
-          setFestveranstaltung(null);
           setFruehschoppenkonzert(null);
           setText('');
           setHandy('');
@@ -169,94 +166,6 @@ const Registration = () => {
             <h3 className='display-4'>Anwesenheit</h3>
             <Row>
               <Col>
-                <h5 className='display-5'>19.09.2021 Jubiläumskonzert *</h5>
-                <div className="custom-control custom-radio mb-3">
-                  <input
-                    className="custom-control-input"
-                    id="customCheck1"
-                    type="radio"
-                    name='konzert'
-                    value={konzert}
-                    onChange={e => setKonzert('Konzert: Ja')}
-                  />
-                  <label className="custom-control-label" htmlFor="customCheck1">
-                    Ja
-                  </label>
-                </div>
-                <div className="custom-control custom-radio mb-3">
-                  <input
-                    className="custom-control-input"
-                    id="customCheck2"
-                    type="radio"
-                    name='konzert'
-                    value={konzert}
-                    onChange={e => setKonzert('Konzert: Ja mit Partner')}
-                  />
-                  <label className="custom-control-label" htmlFor="customCheck2">
-                    Ja mit Partner
-                  </label>
-                </div>
-                <div className="custom-control custom-radio mb-3">
-                  <input
-                    className="custom-control-input"
-                    id="customCheck3"
-                    type="radio"
-                    name='konzert'
-                    value={konzert}
-                    onChange={e => setKonzert('Konzert: Nein')}
-                  />
-                  <label className="custom-control-label" htmlFor="customCheck3">
-                    Nein
-                  </label>
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <h5 className='display-5 '>30.10.2021 Festveranstaltung *</h5>
-                <div className="custom-control custom-radio mb-3">
-                  <input
-                    className="custom-control-input"
-                    id="customCheck4"
-                    type="radio"
-                    name='festveranstaltung'
-                    value={festveranstaltung}
-                    onChange={e => setFestveranstaltung('Festveranstaltung: Ja')}
-                  />
-                  <label className="custom-control-label" htmlFor="customCheck4">
-                    Ja
-                  </label>
-                </div>
-                <div className="custom-control custom-radio mb-3">
-                  <input
-                    className="custom-control-input"
-                    id="customCheck5"
-                    type="radio"
-                    name='festveranstaltung'
-                    value={festveranstaltung}
-                    onChange={e => setFestveranstaltung('Festveranstaltung: Ja mit Partner')}
-                  />
-                  <label className="custom-control-label" htmlFor="customCheck5">
-                    Ja mit Partner
-                  </label>
-                </div>
-                <div className="custom-control custom-radio mb-3">
-                  <input
-                    className="custom-control-input"
-                    id="customCheck6"
-                    type="radio"
-                    name='festveranstaltung'
-                    value={festveranstaltung}
-                    onChange={e => setFestveranstaltung('Festveranstaltung: Nein')}
-                  />
-                  <label className="custom-control-label" htmlFor="customCheck6">
-                    Nein
-                  </label>
-                </div>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
                 <h5 className='display-5 '>31.10.2021 Frühschoppenkonzert anschl. gemütliches
                   Beisammensein *</h5>
                 <div className="custom-control custom-radio mb-3">
@@ -295,6 +204,50 @@ const Registration = () => {
                     onChange={e => setFruehschoppenkonzert('Frühschoppenkonzert: Nein')}
                   />
                   <label className="custom-control-label" htmlFor="customCheck9">
+                    Nein
+                  </label>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <h5 className='display-5'>11.12.2021 Jubiläumskonzert *</h5>
+                <div className="custom-control custom-radio mb-3">
+                  <input
+                    className="custom-control-input"
+                    id="customCheck1"
+                    type="radio"
+                    name='konzert'
+                    value={konzert}
+                    onChange={e => setKonzert('Konzert: Ja')}
+                  />
+                  <label className="custom-control-label" htmlFor="customCheck1">
+                    Ja
+                  </label>
+                </div>
+                <div className="custom-control custom-radio mb-3">
+                  <input
+                    className="custom-control-input"
+                    id="customCheck2"
+                    type="radio"
+                    name='konzert'
+                    value={konzert}
+                    onChange={e => setKonzert('Konzert: Ja mit Partner')}
+                  />
+                  <label className="custom-control-label" htmlFor="customCheck2">
+                    Ja mit Partner
+                  </label>
+                </div>
+                <div className="custom-control custom-radio mb-3">
+                  <input
+                    className="custom-control-input"
+                    id="customCheck3"
+                    type="radio"
+                    name='konzert'
+                    value={konzert}
+                    onChange={e => setKonzert('Konzert: Nein')}
+                  />
+                  <label className="custom-control-label" htmlFor="customCheck3">
                     Nein
                   </label>
                 </div>
